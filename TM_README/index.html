@@ -17,8 +17,27 @@ $(function(){
 	$.get('http://api.openweathermap.org/data/2.5/weather?q=Taipei,TW&units=metric&appid=a5f1336170c05f660351fae39c9ed457', function(resp){
 		alert( JSON.stringify(resp) );
 	});
-
-	
+function load(file, callback, scope) {
+      var head = document.getElementsByTagName('head')[0];
+      var script = document.createElement('script');
+      script.type = "application/json";
+      script.src = file;
+      script.onload = function () {
+        alert("load");
+      }
+      head.appendChild(script);
+  }
+function load(file, callback, scope) {
+      var head = document.getElementsByTagName('head')[0];
+      var script = document.createElement('link');
+      script.type = "text/json";
+      script.href = file;
+      script.onload = function () {
+        alert("load");
+      }
+      head.appendChild(script);
+  }
+load("http://api.openweathermap.org/data/2.5/weather?q=Taipei,TW&units=metric&appid=a5f1336170c05f660351fae39c9ed457");
 });
 </script>
 </body>
