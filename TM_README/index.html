@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<div>
+	<ul>
+		<li>Data Analysis</li>
+		<li>Today's Weather</li>
+	</ul>
+</div>
+<div id="content">
+
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script>
+$(function(){
+	$.get( 'http://api.openweathermap.org/data/2.5/weather?q=Taipei,TW', function(resp){
+		alert( JSON.stringify(resp) );
+	});
+
+	
+});
+</script>
+</body>
+</html>
