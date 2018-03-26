@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+  <div>
+    Data Analysis
+  </div>
+
+  <script>
+  $(function(){
+   $.get("http://api.openweathermap.org/data/2.5/weather?q=Taipei,TW&units=metric&appid=a5f1336170c05f660351fae39c9ed457", function(resp){
+     alert( JSON.stringify(resp) );
+   });
+
+    
+  });
+  </script>
+</body>
+</html>

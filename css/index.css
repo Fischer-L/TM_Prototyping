@@ -1,0 +1,32 @@
+.app-nav {
+  width: 20%;
+  min-width: 12em; /* min-width to contain words */
+  font-size: calc(1em * 0.75);
+  float: left;
+}
+
+.app-nav__item {
+  padding: 5px 5px 5px 20px;
+  border: 1px solid #c0c0c0;
+  border-bottom: 0;
+  cursor: pointer;
+  /* In case "a very long word..." */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.app-nav__item:last-child {
+  border: 1px solid #c0c0c0;
+}
+
+.app-nav__item:hover,
+.app-nav__item:active {
+  border: 1px solid #2a9fcd;
+  background: #e7ebff;
+}
+
+.app-nav__item:hover + .app-nav__item,
+.app-nav__item:active + .app-nav__item {
+  border-top: 0;
+}

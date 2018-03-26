@@ -1,0 +1,16 @@
+/* reset the basic styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  padding: 10px;
+  font-size: 16px;
+  font-family: Arial;
+}
+
+.app-display-no {
+  display: none;
+}

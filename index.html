@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
 <body>
 <div>
-	<ul>
-		<li>Data Analysis</li>
-		<li>Today's Weather</li>
+	<ul class="app-nav">
+		<li class="app-nav__item">Data Analysis</li>
+		<li class="app-nav__item">Today's Weather</li>
 	</ul>
 </div>
 <div id="content">
-
+  <iframe id="page-data-analysis" src="./template/dataAnalysis.html"></iframe>
+  <iframe id="page-today-weather" class="app-display-no"></iframe>
 </div>
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 <script>
-$(function(){
-	$.get("http://api.openweathermap.org/data/2.5/weather?q=Taipei,TW&units=metric&appid=a5f1336170c05f660351fae39c9ed457", function(resp){
-		alert( JSON.stringify(resp) );
-	});
+// $(function(){
+// 	$.get("http://api.openweathermap.org/data/2.5/weather?q=Taipei,TW&units=metric&appid=a5f1336170c05f660351fae39c9ed457", function(resp){
+// 		alert( JSON.stringify(resp) );
+// 	});
 
 	
-});
+// });
 </script>
 </body>
 </html>
