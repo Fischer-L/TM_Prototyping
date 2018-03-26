@@ -5,7 +5,7 @@
 #app-nav {
   width: 20%;
   min-width: 12em; /* min-width to contain words */
-  margin-right: 20px;
+  margin: 0 20px 20px 0;
   font-size: calc(1em * 0.75);
   float: left;
 }
@@ -38,6 +38,5 @@
 
 .app-page {
   width: calc(77% - 20px);
-  min-width: 320px;
   border: 0;
 }

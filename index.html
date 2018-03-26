@@ -13,12 +13,12 @@
 	<li id="app-nav-weather" class="app-nav__item">Today's Weather</li>
 </ul>
 
-<div id="app-content">
-  <iframe id="app-page-data-analysis" class="app-page app-display-no"></iframe>
-  <iframe id="app-page-today-weather" class="app-page app-display-no"></iframe>
+<div id="app-content" class="app-h-100">
+  <iframe id="app-page-data-analysis" class="app-page app-display-no app-min-width app-h-100"></iframe>
+  <iframe id="app-page-today-weather" class="app-page app-display-no app-min-width app-h-100"></iframe>
 </div>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="./js/lib/jquery-2.1.0.min.js"></script>
 <script>
   // Since the codes in the index page are simple,
   // we don't extract them into another file.
@@ -53,6 +53,9 @@
         pageOn.attr("src", src)
       }
     });
+
+    // TMP
+    dataNav.trigger("click");
   })();
 </script>
 

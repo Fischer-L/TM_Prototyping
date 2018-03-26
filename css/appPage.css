@@ -1,0 +1,11 @@
+.app-page-body {
+  width: 100%;
+  max-width: 768px;
+}
+
+.app-page-title {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 20px;
+  font-weight: 400;
+}

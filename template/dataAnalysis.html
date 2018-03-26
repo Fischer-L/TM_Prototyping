@@ -4,19 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/appPage.css">
   <link rel="stylesheet" href="../css/dataAnalysisStyle.css">
 </head>
-<body>
+<body class="app-page-body app-min-width">
 
 <h4 class="app-page-title">Data Analysis</h4>
 
 <div class="app-page-content">
-  <section id="app-data-chart" class="app-display-no">
-  </section>
   <table id="app-data-table" class="app-display-no">
-    
+    <caption class="app-data-table__caption app-data-table__cell"><h4>Birth in Taiwan</h4></caption>
+    <tr class="app-data-table__row--dark">
+      <th class="app-data-table__cell table__cell--highlight">Year</th>
+      <th class="app-data-table__cell">Men</th>
+      <th class="app-data-table__cell">Female</th>
+    </tr>
   </table>
+  <section id="app-data-chart" class="app-display-no"></section>
 </div>
+
+<script type="text/javascript" src="../js/lib/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.flot.min.js"></script>
 <script type="text/javascript" src="../js/dataAnalysisController.js"></script>
+
 </body>
 </html>

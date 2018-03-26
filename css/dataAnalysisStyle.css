@@ -1,0 +1,41 @@
+#app-data-table,
+#app-data-chart {
+  width: 100%;
+  margin: 30px 0;
+}
+
+#app-data-chart {
+  min-height: 23em;
+}
+
+#app-data-table,
+.app-data-table__cell,
+.app-data-table__caption {
+  border: 1px solid #999;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#app-data-table,
+.app-data-table__cell {
+  border-top: 0;
+}
+
+.app-data-table__caption {
+  border-bottom: 0;
+}
+
+.app-data-table__caption,
+.table__cell--highlight {
+  color: #fafafa;
+  background: #888;
+}
+
+.app-data-table__cell,
+.app-data-table__caption {
+  padding: 8px;
+}
+
+.app-data-table__row--dark {
+  background: #ddd;
+}
