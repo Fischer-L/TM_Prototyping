@@ -6,26 +6,55 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
-<div>
-	<ul class="app-nav">
-		<li class="app-nav__item">Data Analysis</li>
-		<li class="app-nav__item">Today's Weather</li>
-	</ul>
+<body id="app">
+
+<ul id="app-nav">
+	<li id="app-nav-data" class="app-nav__item">Data Analysis</li>
+	<li id="app-nav-weather" class="app-nav__item">Today's Weather</li>
+</ul>
+
+<div id="app-content">
+  <iframe id="app-page-data-analysis" class="app-page app-display-no"></iframe>
+  <iframe id="app-page-today-weather" class="app-page app-display-no"></iframe>
 </div>
-<div id="content">
-  <iframe id="page-data-analysis" src="./template/dataAnalysis.html"></iframe>
-  <iframe id="page-today-weather" class="app-display-no"></iframe>
-</div>
+
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 <script>
-// $(function(){
-// 	$.get("http://api.openweathermap.org/data/2.5/weather?q=Taipei,TW&units=metric&appid=a5f1336170c05f660351fae39c9ed457", function(resp){
-// 		alert( JSON.stringify(resp) );
-// 	});
+  // Since the codes in the index page are simple,
+  // we don't extract them into another file.
+  (function () {
+    var dataNav = $("#app-nav-data");
+    var dataPage = $("#app-page-data-analysis");
+    var weatherNav = $("#app-nav-weather");
+    var weatherPage = $("#app-page-today-weather");
 
-	
-// });
+    $("#app").on("click", function (e) {
+      var pageOn = null;
+      var pageOff = null;
+      var src = ";"
+
+      switch(e.target.id) {
+        case dataNav.attr("id"):
+          pageOn = dataPage;
+          pageOff = weatherPage;
+          src = "./template/dataAnalysis.html";
+          break;
+
+        case weatherNav.attr("id"):
+          pageOn = weatherPage;
+          pageOff = dataPage;
+          src = "./template/todayWeather.html";
+          break;
+      }
+
+      pageOn.removeClass("app-display-no");
+      pageOff.addClass("app-display-no");
+      if (!pageOn.attr("src")) {
+        pageOn.attr("src", src)
+      }
+    });
+  })();
 </script>
+
 </body>
 </html>

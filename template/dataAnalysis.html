@@ -4,20 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/dataAnalysisStyle.css">
 </head>
 <body>
-  <div>
-    Data Analysis
-  </div>
 
-  <script>
-  $(function(){
-   $.get("http://api.openweathermap.org/data/2.5/weather?q=Taipei,TW&units=metric&appid=a5f1336170c05f660351fae39c9ed457", function(resp){
-     alert( JSON.stringify(resp) );
-   });
+<h4 class="app-page-title">Data Analysis</h4>
 
+<div class="app-page-content">
+  <section id="app-data-chart" class="app-display-no">
+  </section>
+  <table id="app-data-table" class="app-display-no">
     
-  });
-  </script>
+  </table>
+</div>
+<script type="text/javascript" src="../js/dataAnalysisController.js"></script>
 </body>
 </html>

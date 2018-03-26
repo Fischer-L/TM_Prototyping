@@ -1,4 +1,9 @@
-/* reset the basic styles */
+/**
+ * This CSS stylesheet contains basic and reusable styles across documents.
+ */
+
+/* Reset the basic styles */
+
 * {
   padding: 0;
   margin: 0;
@@ -6,11 +11,18 @@
 }
 
 html {
-  padding: 10px;
   font-size: 16px;
   font-family: Arial;
 }
 
+/* Reset the basic styles end */
+
 .app-display-no {
   display: none;
+}
+
+.app-page-title {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #000;
+  font-weight: 400;
 }

@@ -1,6 +1,11 @@
-.app-nav {
+#app {
+  padding: 10px;
+}
+
+#app-nav {
   width: 20%;
   min-width: 12em; /* min-width to contain words */
+  margin-right: 20px;
   font-size: calc(1em * 0.75);
   float: left;
 }
@@ -29,4 +34,10 @@
 .app-nav__item:hover + .app-nav__item,
 .app-nav__item:active + .app-nav__item {
   border-top: 0;
+}
+
+.app-page {
+  width: calc(77% - 20px);
+  min-width: 320px;
+  border: 0;
 }
