@@ -4,24 +4,38 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/appPage.css">
   <link rel="stylesheet" href="../css/todayWeatherStyle.css">
 </head>
-<body>
+<body class="app-page-body app-min-width">
 
 <h4 class="app-page-title">Today's Weather</h4>
 
-<script type="text/javascript" src="../js/lib/jquery-2.1.0.min.js"></script>
-<script>
-$(function(){
- $.get("http://api.openweathermap.org/data/2.5/weather?q=Taipei,TW&units=metric&appid=a5f1336170c05f660351fae39c9ed457", function(resp){
-  console.log(JSON.stringify(resp));
- }).error(function () {
-  console.log("ERROR");
- });
+<div class="app-page-content">
+  <section id="app-weather-panel">
+    <label class="app-weather__panel-control">City: <input id="app-weather-input-city" class="app-weather__input" type="text" /></label>
+    <label class="app-weather__panel-control">Country: <input id="app-weather-input-country" class="app-weather__input" type="text" /></label>
+    <button id="app-weather-search-btn" class="app-weather__panel-control">Search</button>
+  </section>
+  <section id="app-weather-info">
+    <div id="app-weather-icon" class="app-weather-icon--none"></div>
+    <div class="app-weather-info__content">
+      <h4>
+        <span id="app-weather-location"></span><span id="app-weather-state"></span>
+      </h4>
+      <p id="app-weather-descrption">Please input the city name and the country code</p>
+      <div class="app-weather__sub-info app-display-no">
+        <p>Temperature: <span id="app-weather-temp--min"></span>°C ~ <span id="app-weather-temp--max"></span>°C</p>
+        <p >Humidity: <span id="app-weather-humidity--perc"></span>%</p>
+      </div>
+    </div>
+  </section>
+</div>
 
-  
-});
-</script>
+<script type="text/javascript" src="../js/lib/jquery-2.1.0.min.js"></script>
+<!-- We need this ie9_XDomainRequest.js because of https://blogs.msdn.microsoft.com/ieinternals/2010/05/13/xdomainrequest-restrictions-limitations-and-workarounds/ -->
+<script type="text/javascript" src="../js/lib/ie9_XDomainRequest.js"></script>
+<script type="text/javascript" src="../js/todayWeatherController.js"></script>
 
 </body>
 </html>

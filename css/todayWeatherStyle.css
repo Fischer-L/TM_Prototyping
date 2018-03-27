@@ -1,0 +1,95 @@
+.app-weather__panel-control {
+  margin: 10px 20px 0 0;
+  float: left;
+}
+
+.app-weather__input {
+  padding: 2px;
+}
+
+#app-weather-search-btn {
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 2px;
+  background: #2196F3;
+  color: #fff;
+  cursor: pointer;
+}
+
+#app-weather-search-btn:hover,
+#app-weather-search-btn:active {
+  background: #39a1f4;
+}
+
+#app-weather-info {
+  clear: both;
+  padding-top: 20px;
+  position: relative;
+  padding-left: 64px;
+}
+
+#app-weather-descrption {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.app-weather__sub-info {
+  margin-top: 6px;
+  clear: both;
+  font-size: 0.77em;
+}
+
+#app-weather-location {
+  margin-right: 20px;
+}
+
+#app-weather-icon {
+  width: 54px;
+  height: 54px;
+  display: block;
+  background-image: url("../img/icons.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
+.app-weather-icon--clear-sky {
+  background-position: -75px -20px;
+}
+
+.app-weather-icon--few-clouds {
+  background-position: -75px -92px;
+}
+
+.app-weather-icon--scattered-clouds {
+  background-position: -75px -163px;
+}
+
+.app-weather-icon--broken-clouds {
+  background-position: -4px -307px;
+}
+
+.app-weather-icon--shower-rain {
+  background-position: -291px -163px;
+}
+
+.app-weather-icon--rain {
+  background-position: -364px -163px;
+}
+
+.app-weather-icon--thunderstorm {
+  background-position: -148px -307px;
+}
+
+.app-weather-icon--snow {
+  background-position: -364px -236px;
+}
+
+.app-weather-icon--mist {
+  background-position: -3px -164px;
+}
+
+.app-weather-icon--none {
+  background-size: 0;
+}

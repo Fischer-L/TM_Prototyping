@@ -31,20 +31,27 @@
     $("#app").on("click", function (e) {
       var pageOn = null;
       var pageOff = null;
-      var src = ";"
-
+      var src = "";
+      
       switch(e.target.id) {
         case dataNav.attr("id"):
           pageOn = dataPage;
           pageOff = weatherPage;
           src = "./template/dataAnalysis.html";
+          dataNav.addClass("app-nav--active");
+          weatherNav.removeClass("app-nav--active");
           break;
 
         case weatherNav.attr("id"):
           pageOn = weatherPage;
           pageOff = dataPage;
           src = "./template/todayWeather.html";
+          dataNav.removeClass("app-nav--active");
+          weatherNav.addClass("app-nav--active");
           break;
+
+        default:
+          return;
       }
 
       pageOn.removeClass("app-display-no");
@@ -53,9 +60,6 @@
         pageOn.attr("src", src)
       }
     });
-
-    // TMP
-    dataNav.trigger("click");
   })();
 </script>
 

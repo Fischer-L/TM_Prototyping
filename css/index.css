@@ -25,12 +25,14 @@
   border: 1px solid #c0c0c0;
 }
 
+.app-nav__item.app-nav--active,
 .app-nav__item:hover,
 .app-nav__item:active {
   border: 1px solid #2a9fcd;
   background: #e7ebff;
 }
 
+.app-nav__item.app-nav--active + .app-nav__item,
 .app-nav__item:hover + .app-nav__item,
 .app-nav__item:active + .app-nav__item {
   border-top: 0;
