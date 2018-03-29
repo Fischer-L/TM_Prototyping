@@ -53,6 +53,26 @@
   top: 20px;
   left: 0;
 }
+#app-weather-icon.app-loading {
+  background-image: url("../img/loading.gif");
+  background-size: 52px;
+}
+
+.app-weather-icon--clear {
+  background-position: -75px -20px;
+}
+
+.app-weather-icon--raining {
+  background-position: -291px -380px;
+}
+
+.app-weather-icon--cloudy {
+  background-position: -73px -387px;
+}
+
+.app-weather-icon--na {
+  background-position: -141px -531px;
+}
 
 .app-weather-icon--clear-sky {
   background-position: -75px -20px;
