@@ -16,4 +16,4 @@ This task borrows from the 3rd-party lib, flow.js, to draw the data chart.
 
 
 ### Task 4:
-Besides displaying eaether icons based on the description, we also display the weather icons based on the openweathermap api: https://openweathermap.org/weather-conditions
+Besides displaying waether icons based on the description, we also display the weather icons based on the openweathermap api: https://openweathermap.org/weather-conditions
